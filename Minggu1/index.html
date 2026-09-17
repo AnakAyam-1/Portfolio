@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justin | Portfolio</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"> 
+                <h2>Justin</h2>
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<main>
+
+<section class="hero">
+
+    <div class="hero-image reveal-left">
+        <img src="./images/Profile.jpeg" alt="Profile Photo">
+    </div>
+
+    <div class="hero-content reveal-right">
+        <h1>Hi, I'm Justin</h1>
+        <h2>Cybersecurity Student</h2>
+
+        <p>
+            I am a Cybersecurity student who enjoys learning networking,
+            system administration, and web development. I am always eager
+            to improve my technical skills through projects and practical experience.
+        </p>
+    </div>
+
+</section>
+
+
+<section class="about reveal">
+
+    <h2>About Me</h2>
+
+    <p>
+        I am currently studying Cybersecurity and have experience working
+        on networking, Windows Server, Linux, virtualization, and web development projects.
+    </p>
+
+</section>
+
+
+<section class="skills reveal">
+
+    <h2>Skills</h2>
+
+    <ul class="skill-list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Python</li>
+        <li>Linux</li>
+        <li>Windows Server</li>
+        <li>VMware</li>
+        <li>Git & GitHub</li>
+    </ul>
+
+</section>
+
+
+<section class="education reveal">
+
+    <h2>Education</h2>
+
+    <article>
+        <h3>Politeknik Negeri Batam</h3>
+        <p>Diploma IV - Cybersecurity Engineering</p>
+    </article>
+
+</section>
+
+</main>
+
+
+<footer>
+    <p>&copy; 2026 Justin. All Rights Reserved.</p>
+</footer>
+
+
+<script>
+
+const reveals = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
+
+function revealOnScroll() {
+    for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 120;
+
+        if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+        }
+    }
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
+
+</script>
+
+</body>
+
+</html>
